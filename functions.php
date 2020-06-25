@@ -6,8 +6,8 @@ include(plugin_dir_path(__FILE__)."inc/smsclone_general_setup.php");
 include(plugin_dir_path(__FILE__)."inc/smsclone_processor.php");
 
 //Events
-register_activation_hook(__FILE__,'smsclone_activate');
-register_deactivation_hook(__FILE__,'smsclone_deactivate');
+register_activation_hook(SMSCLONE_PLUGIN_FILE,'smsclone_activate');
+register_deactivation_hook(SMSCLONE_PLUGIN_FILE,'smsclone_deactivate');
 add_filter('plugin_action_links_' . SMSCLONE_PLUGIN_BASENAME,'smsclone_configure_action_link');
 add_action('admin_enqueue_scripts','smsclone_enqueue_scripts');
 add_action('admin_menu','smsclone_add_menu');
